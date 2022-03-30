@@ -88,6 +88,57 @@ a, a:link {
         justify-content: space-between;
     }
 
+    /* --------side pannel--------- */
+    /* .header-wrap 높이 50px : 로고, 버거단추 있는 곳 */
+    #sidePannel {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        top: 50px; /* top에서 반대방향으로 50px 이동 */
+        left: 0;
+        background: rgba(0, 0, 0, .5);
+    }
+    #closeSide {
+        background: rgba(0, 0, 0, 1);
+        color: var(--base-text-white);
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        position: absolute;
+        right: 0;
+        top: -50px;
+    }
+    .pannel-overlay nav {
+        color: var(--base-text-white);
+        padding: 10%;
+    }
+    .icon-links {
+        display: flex;
+        justify-content: center;
+        column-gap: .5rem;
+    }
+    #snb > li {
+        margin: 1rem 0;
+    }
+    #snb > li::after {
+        content: "+";
+        display: inline;
+        position: absolute;
+        right: 0;
+        color: white;
+        font-size: 14px;
+        margin-right: 5%;
+    }
+    .pannel-overlay {
+        background: #262626;
+        width: 50%;
+        height: 100%;
+        margin: 0 0 0 50%;
+        overflow: hidden;
+    }
+
     /* --------mobile section--------- */
     .section-title {
         text-align: center;
