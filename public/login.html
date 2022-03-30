@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트UXUI 디자인과정 &gt; 로그인</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/72551b6a36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <ul class="top-wrap">
+                <a href="/"><i class="fa-solid fa-house"></i></a>
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </ul>
+        </div>
+        <p>registration</p>
+        <a href="/">home</a>
+        <div class="logo-2">
+            <a href="#">
+                <img src="images/logo2.png" alt="로고">
+            </a>
+        </div>
+    </header>
+    <section>
+        <h2 class="section-tilte">로그인</h2>
+        <article>
+            <h3 class="d-none">로그인</h3>
+            <form action="/add_user" id="registerForm" method="post" autocomplete="off">
+                <ul>
+                    <li>
+                        <label for="userId">ID</label>
+                        <input type="text" id="userId" maxlength="16" required>
+                    </li>
+                    <li>
+                        <label for="userPw">PW</label>
+                        <input type="text" id="userPw" maxlength="24" required>
+                    </li>
+                    <li>
+                        <label for="submit" value="로그인">
+                    </li>
+                    <ul>
+                        <li><a href="#">google</a></li>
+                        <li><a href="#">insta</a></li>
+                        <li><a href="#">facebook</a></li>
+                    </ul>
+                </ul>
+            </form>
+
+        </article>
+    </section>
+    <footer>
+        <ul class=links>
+            <li>
+                <a href="/">처음으로</a>
+            </li>
+            <li>
+                <a href="/customer.html">고객센터</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

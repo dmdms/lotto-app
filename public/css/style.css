@@ -1,0 +1,131 @@
+@charset "utf-8";
+:root {
+    --base-text-dark: #333;
+    --base-text-white: #fff;
+    --base-bg-white: white;
+    --base-bg-dark: #333;
+    --base-font-size: 16px;
+    --bar-bg: #F6B11C;
+}
+
+body {
+    font: 16px/1.5 "Noto Sans KR";
+}
+a, a:link {
+    text-decoration: none;
+    color: inherit;
+}
+.d-none {
+    display: none;
+}
+
+@media screen and (max-width: 480px){
+    html {
+        height: 100vh; /*또는 100%*/
+    }
+    body {
+        background: linear-gradient(to bottom, #fff, #e5f1ff)
+    }
+    .header-top{
+        background: var(--bar-bg);
+        height: 50px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .top-wrap{
+        height: 50px;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+        align-items: center;
+        color: var(--base-text-white);
+
+    }
+    .top-wrap > li {
+        height: 30px;
+        color: var(--base-text-white);
+        font-size: 16px;
+    }
+    .logo {
+        width: 330px;
+        height: 219px;
+        margin: 100px auto;
+        
+    }
+    .btns {
+        display: flex;
+        flex-direction: column; /*상,하 배치*/
+    }
+    button {
+        height: 75px;
+        width: 360px;
+        color: white;
+        font-size: 20px;
+        border: 0;
+        border-radius: 50px;
+        margin: 20px auto;
+    }
+    #make_num5{
+        background: #014EA0 url("../images/x5.png") no-repeat 6% center;
+    }
+    #make_num1{
+        background: #014EA0 url("../images/x1.png") no-repeat 6% center;
+    }
+    footer {
+        width: 100%;
+        position: fixed;
+        height: 40px;
+        bottom: 0;
+        left: 0;
+    }
+    .links {
+        display: flex;
+        padding: 0 2vw;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    /* --------mobile section--------- */
+    .section-title {
+        text-align: center;
+        font-size: 1.250rem;
+        margin-bottom: 30px;
+    }
+    .logo-2{
+        width: 254px;
+        height: 168px;
+        margin: 80px auto 50px;
+    }
+
+    /* --------mobile section : customer page--------- */
+    .icon-list {
+        display: grid;
+        margin: 1.5rem 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* fraction : 비율(공간) */
+        gap: 1rem;
+    }
+    .icon-list li {
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, .3);
+        min-height: 110px;
+        border-radius: 10px;
+        /* transition: all ease-in-out (); */
+    }
+    .icon-list li:hover {
+        background: #004EA1;
+        color: var(--base-text-white);
+        transform: scale(1.1);
+    }
+    .icon-list li a {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
