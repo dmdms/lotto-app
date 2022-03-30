@@ -1,0 +1,9 @@
+#ignore folder
+node_modules/
+
+#ignore files
+*.dxf
+*.java
+*.psd
+*.ai
+*.mp3
