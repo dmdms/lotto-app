@@ -100,7 +100,7 @@ a, a:link {
         background: rgba(0, 0, 0, .5);
     }
     #closeSide {
-        background: rgba(0, 0, 0, 1);
+        background: #262626;
         color: var(--base-text-white);
         width: 50px;
         height: 50px;
