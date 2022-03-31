@@ -2,8 +2,12 @@
 :root {
     --base-text-dark: #333;
     --base-text-white: #fff;
-    --base-bg-white: white;
+    --base-text-point: rgb(179, 39, 39);
+    --base-bg-white: #fff;
     --base-bg-dark: #333;
+    --main-color1: #014EA0;
+    --main-color2: #F6B11C;
+    --main-color3: #92C120;
     --base-font-size: 16px;
     --bar-bg: #F6B11C;
 }
@@ -15,8 +19,15 @@ a, a:link {
     text-decoration: none;
     color: inherit;
 }
+.text-center {
+    text-align: center;
+}
 .d-none {
     display: none;
+}
+
+section {
+    margin: 0 1rem;
 }
 
 @media screen and (max-width: 480px){
@@ -69,10 +80,10 @@ a, a:link {
         margin: 20px auto;
     }
     #make_num5{
-        background: #014EA0 url("../images/x5.png") no-repeat 6% center;
+        background: var(--main-color1) url("../images/x5.png") no-repeat 6% center;
     }
     #make_num1{
-        background: #014EA0 url("../images/x1.png") no-repeat 6% center;
+        background: var(--main-color1) url("../images/x1.png") no-repeat 6% center;
     }
     footer {
         width: 100%;
@@ -100,7 +111,7 @@ a, a:link {
         background: rgba(0, 0, 0, .5);
     }
     #closeSide {
-        background: #262626;
+        background: var(--point-color, #B86D00); /* 대체컬러 */
         color: var(--base-text-white);
         width: 50px;
         height: 50px;
@@ -114,6 +125,9 @@ a, a:link {
         color: var(--base-text-white);
         padding: 10%;
     }
+    #snb > li > a { /* 메뉴항목이 포함된 범위 전체 클릭 가능 */
+        display: block;
+    }
     .icon-links {
         display: flex;
         justify-content: center;
@@ -121,11 +135,13 @@ a, a:link {
     }
     #snb > li {
         margin: 1rem 0;
+        position: relative;
     }
     #snb > li::after {
         content: "+";
         display: inline;
         position: absolute;
+        top: 0;
         right: 0;
         color: white;
         font-size: 14px;
@@ -151,6 +167,85 @@ a, a:link {
         margin: 80px auto 50px;
     }
 
+    /* --------mobile section : login page--------- */
+    #loginForm li, #registerForm li {
+        position: relative;
+        margin: 0 0 1rem 0;
+    }
+    #loginForm li input, #registerForm li input{
+        text-indent: 20%;
+    }
+    #loginForm li label, #registerForm li label {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        color: #898989;
+
+    }
+    #userId, #userPw, [type=submit], #registerForm [type=submit] {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+        border: 0;
+    }
+    [type=submit] {
+        background: var(--main-color1);
+        color: var(--base-text-white);
+        text-indent: 0 !important /* important 많은 사용 권장은 X */
+    }
+    .sns-icons {
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        font-size: 3rem;
+    }
+    /* --------mobile section : register page--------- */
+    #registerForm li #userSecurity {
+        width: 69%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+        border: 0;
+        text-indent: 33%;
+    }
+    label[for-userPrivacy] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    #registerForm li #clickSecurity {
+        display: inline-block;
+        line-height: 53px;
+        border-radius: 10px;
+        height: 53px;
+        width:  27%;
+        margin: 0 0 0 1%;
+        color: var(--base-text-white);
+        background: var(--main-color3);
+        vertical-align: middle;
+    }
+    .warn {
+        color: var(--base-text-point);
+        position: absolute;
+        right: 0;
+    }
+    #joinBTN {
+        margin: 2% 0;
+    }
+    #cancelBTN {
+        background: #898989;
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+        border: 0;
+        color: var(--base-text-white);
+        text-indent: 0 !important
+    }
+
     /* --------mobile section : customer page--------- */
     .icon-list {
         display: grid;
@@ -166,7 +261,7 @@ a, a:link {
         /* transition: all ease-in-out (); */
     }
     .icon-list li:hover {
-        background: #004EA1;
+        background: var(--main-color1);
         color: var(--base-text-white);
         transform: scale(1.1);
     }

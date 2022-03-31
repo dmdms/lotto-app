@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스마트UXUI 디자인과정 &gt; 로그인</title>
+    <title>스마트UXUI 디자인과정 &gt; 고객센터</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,19 +13,52 @@
     <script src="https://kit.fontawesome.com/72551b6a36.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="main">
+    <div id="sidePannel" class="d-none">
+        <div id="closeSide">
+            <a href="#">
+                <i class="fa-solid fa-close"></i>
+            </a>
+        </div>
+        <div class="pannel-overlay">
+            <nav>
+                <ul id="snb">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">당첨확률</a></li>
+                    <li><a href="#">당첨후기</a></li>
+                </ul>
+                <hr>
+                <ul class="icon-links">
+                    <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="login.html"><i class="fa-solid fa-lock-open"></i></a></li>
+                    <li><a href="register.html"><i class="fa-solid fa-user-plus"></i></a></li>
+                    <li><a href="customer.html"><i class="fa-solid fa-headset"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <header>
         <div class="header-top">
+            <!-- ul.top-wrap>li*2[href=#]{text} -->
             <ul class="top-wrap">
-                <a href="/"><i class="fa-solid fa-house"></i></a>
-                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <li>
+                    <a href="/"><i class="fa-solid fa-house"></i></a>
+                </li>
+                <li>
+                    <!-- 메뉴바 : burger icon -->
+                    <div id="openSide">
+                        <a href="#">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </div>
+                    <!-- <a href="#"><i class="d-none fa-solid fa-close"></i></a> -->
+                </li>
             </ul>
         </div>
-        <p>registration</p>
-        <a href="/">home</a>
         <div class="logo-2">
             <a href="#">
-                <img src="images/logo2.png" alt="로고">
+                <img src="images/logo2.png" alt="로고2">
             </a>
         </div>
     </header>
@@ -83,5 +117,6 @@
             </li>
         </ul>
     </footer>
+    <script src="script/route.js"></script>
 </body>
 </html>
