@@ -175,6 +175,7 @@ section {
 
     /* --------mobile section : login page--------- */
     #loginForm li, #registerForm li {
+        display: flex;
         position: relative;
         margin: 0 0 1rem 0;
     }
@@ -249,7 +250,8 @@ section {
         box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
         border: 0;
         color: var(--base-text-white);
-        text-indent: 0 !important
+        text-indent: 0 !important;
+        transform: translateY(15%);
     }
 
     /* --------mobile section : result page--------- */
@@ -364,4 +366,10 @@ section {
         align-items: center;
     }
 
+}
+
+@media screen and (max-width: 320px) {
+    #lotto_num dd{
+        letter-spacing: -1px;
+    }
 }
