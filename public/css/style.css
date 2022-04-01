@@ -22,6 +22,13 @@ a, a:link {
 .text-center {
     text-align: center;
 }
+.justify-center {
+    justify-content: center;
+}
+.column-direction {
+    flex-direction: column;
+}
+
 .my-1 {
     margin: 1rem 0
 }
@@ -169,9 +176,6 @@ section {
         height: 168px;
         margin: 80px auto 50px;
     }
-    #result5-main {
-        padding-bottom: 50px;
-    }
 
     /* --------mobile section : login page--------- */
     #loginForm li, #registerForm li {
@@ -233,6 +237,7 @@ section {
         color: var(--base-text-white);
         background: var(--main-color3);
         vertical-align: middle;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
     }
     .warn {
         color: var(--base-text-point);
@@ -368,6 +373,11 @@ section {
 
 }
 
+@media screen and (max-width: 380px) {
+    #registerForm li #clickSecurity {
+        margin: 0 0 0 5px;
+    }
+}
 @media screen and (max-width: 320px) {
     #lotto_num dd{
         letter-spacing: -1px;

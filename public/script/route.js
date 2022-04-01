@@ -20,3 +20,25 @@ function sideOpen(){
 function sideClose(){
     sidePan.classList.add("d-none");
 }
+
+// 로또 1게임 - 잠금해제
+const toggleLockBtn = document.querySelector("#blind")
+toggleLockBtn.addEventListener("click", handleClick)
+let btnStatus = "lock"
+
+function handleClick(e){
+    if(e.target.className == btnStatus) {
+        unlock("해제");
+    } else{
+        lock("잠금");
+    }
+}
+
+function unlock(message){
+    toggleLockBtn.className = "unlock"
+    toggleLockBtn.textContent = message
+}
+function lock(message) {
+    toggleLockBtn.className = "lock"
+    toggleLockBtn.textContent = message
+}
