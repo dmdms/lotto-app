@@ -169,6 +169,9 @@ section {
         height: 168px;
         margin: 80px auto 50px;
     }
+    #result5-main {
+        padding-bottom: 50px;
+    }
 
     /* --------mobile section : login page--------- */
     #loginForm li, #registerForm li {
