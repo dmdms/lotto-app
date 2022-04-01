@@ -13,11 +13,17 @@ app.get('/join', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-  res.sendFile(__dirname+'/public/register.html')
+  res.sendFile(__dirname+'/public/login.html')
 })
 
 app.get('/add_user', (req, res) => {
-  res.sendFile(__dirname+'/public/register.html')
+  res.send("정상적으로 회원가입 되었습니다.")
+})
+app.get('/result1', (req, res) => {
+  res.sendFile(__dirname+'/public/result1.html')
+})
+app.get('/result5', (req, res) => {
+  res.sendFile(__dirname+'/public/result5.html')
 })
 
 app.listen(port, () => {

@@ -22,6 +22,9 @@ a, a:link {
 .text-center {
     text-align: center;
 }
+.my-1 {
+    margin: 1rem 0
+}
 .d-none {
     display: none;
 }
@@ -244,6 +247,66 @@ section {
         border: 0;
         color: var(--base-text-white);
         text-indent: 0 !important
+    }
+
+    /* --------mobile section : result page--------- */
+    #lotto_num .dl-wrap {
+        display: table;
+        width: 100%;
+        margin: 0 auto;
+    }
+    #lotto_num dl {
+        display: table-row;
+        
+    }
+    #lotto_num dt, #lotto_num dd {
+        display: table-cell;
+    }
+    #lotto_num dt {
+        background: #c3c3c3;
+        color: var(--base-text-dark);
+        padding: 1rem 2rem;
+    }
+    #lotto_num dd {
+        border-top: 1px solid #c3c3c3;
+        border-bottom: 1px solid #c3c3c3;
+        letter-spacing: 5px;
+    }
+    #blind {
+        height: 30px;
+        color: var(--base-text-dark);
+        font-size: var(--base-font-size-small, 13px);
+        width: 150px;
+        border-radius: 50px;
+        position: relative;
+        display: block;
+        margin: 2rem auto;
+        transition: all ease-in-out .3s;        
+    }   
+    #blind.lock {        
+        background: var(--base-bg-gray, #b8b8b8);
+    }    
+    #blind.unlock {
+        background: var(--main-color1);
+        color: var(--base-text-white);
+    }
+    #blind::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        transition: all ease-in-out .2s;        
+        background: var(--base-bg-white);
+    }
+    #blind.lock::before {
+        left: 5px;
+    }
+    #blind.unlock::before {
+        left: calc(100% - 25px);
     }
 
     /* --------mobile section : customer page--------- */
