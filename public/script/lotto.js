@@ -22,7 +22,7 @@ function show1num(){
 
     let start = Math.ceil(Math.random() * 40); // 정수로 시작점
     let new_num_one = num_one.slice(start, start+6);
-    new_num_one.sort(function(a,b){
+    new_num_one.sort(function(a,b){ // 오름차순 정리
         return a-b;
     })
     localStorage.setItem("lottoNum", new_num_one)
@@ -31,11 +31,37 @@ function show1num(){
     //console.log('보너스번호 :'+bonus_num)
     // localStorage.setItem("game_one", new_num_one)
 
-    location.href = "/result1.html"
+    location.href = "/result1"
 }
 // let final_bonus_num = show1num();
 // console.log("1게임 보너스 번호 : "+final_bonus_num);
 
-// function show5num(){
-//     
-// }
+function show5num(){
+    let num_five = [];
+    for(let i=1; i<46; i++){
+        num_five.push(i);
+    }
+    // console.log(num_five); // 최초 만들어진 1~45 순서대로
+
+    num_five.sort((a,b)=>{return Math.random()-0.7}); // arrow function (화살표 함수)
+    // console.log(num_five)
+    // num_five.sort(function(a,b){ // 위랑 같음
+    //     retrun a-b
+    // })
+
+    // 6개씩 랜덤 5회 추출
+    let num_five_arr = [];
+    for(let i=0; i<5; i++){
+        let start = Math.ceil(Math.random() * 40); // 정수로 시작점
+        // console.log("start : "+start);
+        let new_num_five = num_five.slice(start, start+6);
+        new_num_five.sort(function(a,b){
+            return a-b;
+        });
+        console.log(new_num_five);
+        num_five_arr.push(new_num_five);
+    }
+    // console.log(num_five_arr);
+    localStorage.setItem("lottoNums",JSON.stringify(num_five_arr)) // JSON.stringify() vs JSON.parse() : 데이터 주고받을 때 사용
+    location.href = "/result5"
+}
